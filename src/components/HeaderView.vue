@@ -42,6 +42,10 @@ export default {
 <style scoped lang="scss">
 .header {
   background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   &__container {
     display: flex;
     align-items: center;
@@ -87,12 +91,11 @@ export default {
     transition: all 0.4s;
     &:hover {
       cursor: pointer;
-      opacity: 0.7;
+      color: #A6A6A6;
     }
     &_login {
         text-transform: uppercase;
     }
   }
 }
-
 </style>

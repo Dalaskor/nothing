@@ -1,14 +1,17 @@
 <template>
 <HeaderView/>
+<MainView/>
 </template>
 
 <script>
 import HeaderView from './components/HeaderView.vue';
+import MainView from './components/MainView.vue';
 
 export default {
   name: 'App',
   components: {
     HeaderView,
+    MainView,
   },
 };
 </script>
@@ -51,6 +54,23 @@ img{vertical-align: top;}
   max-width: 1347px; // Ширина контейнера в макете + 15px * 2 из padding
   margin: 0px auto;
   padding: 0px 15px; // Отступы безопасности для адаптива
+
+  /* PC */
+  @media (max-width: 1087px) {
+    max-width: 970px;
+  }
+  /* TABLET */
+  @media (max-width: 992.98px) {
+    max-width: 750px;
+  }
+  /* MOBILE */
+  @media (max-width: 767.98px) {
+    max-width: none;
+  }
+  /* MOBILE */
+  @media (max-width: 479.98px) {
+    max-width: none;
+  }
 }
 
 #app {
@@ -60,5 +80,34 @@ img{vertical-align: top;}
   font-size: 20px;
   line-height: 100%;
   color: #000000;
+}
+
+.btn {
+  width: 138px;
+  height: 46px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+  &:hover {
+    cursor: pointer;
+    background: #A7A7A7;
+  }
+  &_black {
+    background: #000000;
+    color: #FFFFFF;
+    &:hover {
+        background: #777777;
+    }
+  }
 }
 </style>
