@@ -64,7 +64,7 @@ img{vertical-align: top;}
     max-width: 750px;
   }
   /* MOBILE */
-  @media (max-width: 767.98px) {
+  @media (max-width: 768.98px) {
     max-width: none;
   }
   /* MOBILE */
