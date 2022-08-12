@@ -141,6 +141,8 @@ export default {
   height: 100vh;
   display: flex;
   align-items: center;
+  z-index: 99999;
+  position: relative;
   @media (max-width: 767.98px) {
     height: 100%;
     padding-top: 75px;

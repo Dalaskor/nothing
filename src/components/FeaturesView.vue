@@ -37,6 +37,9 @@ export default {
 
 <style scoped lang="scss">
 .features {
+  z-index: 99999;
+  position: relative;
+  background-color: #fff;
   &__container {
     display: flex;
     align-items: center;
