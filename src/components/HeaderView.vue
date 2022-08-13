@@ -46,6 +46,7 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 999999;
   &__container {
     display: flex;
     align-items: center;
