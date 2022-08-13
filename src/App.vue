@@ -34,6 +34,10 @@ a:hover{text-decoration: none;}
 ul li{list-style: none;}
 img{vertical-align: top;}
 
+body {
+  overflow-x: hidden;
+}
+
 @font-face {
   font-family: 'Inconsolata';
   font-display: swap;

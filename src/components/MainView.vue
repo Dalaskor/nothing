@@ -3,6 +3,7 @@
     <HomeView/>
     <FeaturesView/>
     <SoundView/>
+    <TonesView/>
 </main>
 </template>
 
@@ -10,6 +11,7 @@
 import HomeView from './HomeView.vue';
 import FeaturesView from './FeaturesView.vue';
 import SoundView from './SoundView.vue';
+import TonesView from './TonesView.vue';
 
 export default {
   name: 'MainView',
@@ -17,6 +19,7 @@ export default {
     HomeView,
     FeaturesView,
     SoundView,
+    TonesView,
   },
 };
 </script>

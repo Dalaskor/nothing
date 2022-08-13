@@ -41,10 +41,12 @@ window.addEventListener('scroll', () => {
   // 230 to 976
   const minScroll = 230;
   const maxScroll = 976;
-  if (scrollCount >= minScroll && scrollCount <= maxScroll) {
-    const proc = -150+(150 * (scrollCount - minScroll) / (maxScroll - minScroll));
-    document.getElementById('soundImageLeft').style.transform = 'translate(' + proc + '%, ' + proc + '%) ' +
-        'scale(' + (100 - proc) + '%)';
+  if (window.innerWidth > 1087.99) {
+    if (scrollCount >= minScroll && scrollCount <= maxScroll) {
+      const proc = -150+(150 * (scrollCount - minScroll) / (maxScroll - minScroll));
+      document.getElementById('soundImageLeft').style.transform = 'translate(' + proc + '%, ' + 0 + '%) ' +
+          'scale(' + (100 - proc) + '%)';
+    }
   }
 });
 </script>
@@ -68,7 +70,7 @@ window.addEventListener('scroll', () => {
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 10;
+        z-index: 999;
         background-color: #000;
         @media (max-width: 1087.99px) {
           grid-column: 1 / 4;
@@ -81,7 +83,7 @@ window.addEventListener('scroll', () => {
         grid-row: 1;
         background-color: #000;
         padding: 252px 0px 286px 0px;
-        z-index: 10;
+        z-index: 999;
         @media (max-width: 1087.99px) {
           grid-column: 1 / 4;
           grid-row: 3;
@@ -92,6 +94,7 @@ window.addEventListener('scroll', () => {
         grid-row: 1;
         background-color: #000;
         position: relative;
+        z-index: 10;
         @media (max-width: 1087.99px) {
           grid-column: 1 / 4;
           grid-row: 2;
@@ -135,13 +138,11 @@ window.addEventListener('scroll', () => {
   &__button {
   }
   &__image-right {
-    @media (max-width: 1087.99px) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      top: 0;
-      left: 0;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
     
   }
   &__img-right {
