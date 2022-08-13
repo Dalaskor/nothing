@@ -38,6 +38,7 @@ export default {
         font-weight: 400;
         font-size: 36px;
         line-height: 100%;
+        text-transform: uppercase;
     }
     &__description {
         font-size: 22px;

@@ -1,17 +1,20 @@
 <template>
 <HeaderView/>
 <MainView/>
+<FooterView/>
 </template>
 
 <script>
 import HeaderView from './components/HeaderView.vue';
 import MainView from './components/MainView.vue';
+import FooterView from './components/FooterView.vue';
 
 export default {
   name: 'App',
   components: {
     HeaderView,
     MainView,
+    FooterView,
   },
 };
 </script>
