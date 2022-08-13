@@ -1,4 +1,6 @@
-# nothing
+# Nothing landingpage
+
+Demo: https://dalaskor.github.io/nothing/
 
 ## Project setup
 ```
