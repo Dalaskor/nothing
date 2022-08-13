@@ -43,7 +43,6 @@ window.addEventListener('scroll', () => {
   const maxScroll = 976;
   if (scrollCount >= minScroll && scrollCount <= maxScroll) {
     const proc = -150+(150 * (scrollCount - minScroll) / (maxScroll - minScroll));
-    console.log(proc);
     document.getElementById('soundImageLeft').style.transform = 'translate(' + proc + '%, ' + proc + '%) ' +
         'scale(' + (100 - proc) + '%)';
   }
@@ -54,13 +53,13 @@ window.addEventListener('scroll', () => {
 .sound {
   background-color: #000;
   color: #fff;
-  position: relative;
+  // position: relative;
   z-index: 9999;
   &__container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     grid-template-rows: auto;
-    grid-gap: 25px;
+    grid-auto-flow: column;
   }
   &__column {
       &_1 {
@@ -69,6 +68,13 @@ window.addEventListener('scroll', () => {
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 10;
+        background-color: #000;
+        @media (max-width: 1087.99px) {
+          grid-column: 1 / 4;
+          grid-row: 1;
+          padding: 50px 0;
+        }
       }
       &_2 {
         grid-column: 2;
@@ -76,23 +82,30 @@ window.addEventListener('scroll', () => {
         background-color: #000;
         padding: 252px 0px 286px 0px;
         z-index: 10;
+        @media (max-width: 1087.99px) {
+          grid-column: 1 / 4;
+          grid-row: 3;
+        }
       }
       &_3 {
         grid-column: 3;
         grid-row: 1;
+        background-color: #000;
+        position: relative;
+        @media (max-width: 1087.99px) {
+          grid-column: 1 / 4;
+          grid-row: 2;
+          height: 100vh;
+        }
       }
   }
   &__image-left {
-    width: 368px;
-    height: 370.42px;
-    // transform: translate(-150%, -150%);
-    // &_anim {
-    //     transform: translate(calc(50vw - 50%), calc(80vh - 50%)) 
-    //           rotate(calc(var(--scroll) * 0.5deg))
-    //           scale(calc(calc(var(--scroll) * 0.01) + 1));
-    // }
+    max-width: 368px;
+    max-height: 370.42px;
   }
   &__img-left {
+    width: 100%;
+    height: 100%;
   }
   &__content {
     display: flex;
@@ -122,14 +135,19 @@ window.addEventListener('scroll', () => {
   &__button {
   }
   &__image-right {
+    @media (max-width: 1087.99px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 0;
+      left: 0;
+    }
+    
+  }
+  &__img-right {
     position: fixed;
     z-index: 5;
     top: 25%;
-    right: 15%;
-    width: 375px;
-    height: 100%;
-  }
-  &__img-right {
   }
 }
 </style>
