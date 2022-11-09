@@ -2,6 +2,8 @@
 
 Demo: https://dalaskor.github.io/nothing/
 
+![Preview](https://github.com/Dalaskor/nothing/blob/master/src/assets/Preview.png?raw=true)
+
 ## Project setup
 ```
 npm install
